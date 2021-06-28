@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Header from '../../components/Header/Header';
 import Search from '../../components/Search/Search';
+import Results from '../../components/Results/Results';
 import './googleBooks.css';
 
 const GoogleBooks = () => {
@@ -21,6 +22,7 @@ const GoogleBooks = () => {
           {console.log(results)}
         </div>
       </div>
+      <Results results={results} />
     </Container>
   );
 };

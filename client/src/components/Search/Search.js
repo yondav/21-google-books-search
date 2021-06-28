@@ -11,10 +11,10 @@ const Search = ({ input, setInput, setResults }) => {
   const handleChange = (e) => {
     setTimeout(() => {
       setInput(e.target.value);
-    }, 1000);
+    }, 2000);
     //still sending the api request with no value for some reason
     if (e.target.value.trim() === '') {
-      return;
+      return null;
     } else {
       API.googleBooks(input).then(({ data: { items } }) => {
         setResults(items);
