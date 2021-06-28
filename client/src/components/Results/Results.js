@@ -6,7 +6,7 @@ const Results = ({ results }) => {
     <div className='row'>
       {results.map((book) => {
         return (
-          <div className='col-12 col-md-6 col-lg-4'>
+          <div className='col-12 col-md-6 col-lg-4' key={book.id}>
             <Card>
               <Card.Img
                 variant='top'

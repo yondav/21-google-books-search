@@ -13,7 +13,7 @@ const Search = ({ input, setInput, setResults }) => {
       setInput(e.target.value);
     }, 2000);
     //still sending the api request with no value for some reason
-    if (e.target.value.trim() === '') {
+    if (input.trim() === '') {
       return null;
     } else {
       API.googleBooks(input).then(({ data: { items } }) => {
