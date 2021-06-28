@@ -1,0 +1,11 @@
+.btn {
+  color: var(--underline);
+  border-color: var(--underline);
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  color: var(--primary-light);
+  background-color: var(--underline);
+}

@@ -1,0 +1,5 @@
+.main-body {
+  background-color: var(--primary-light);
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+}
