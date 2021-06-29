@@ -14,8 +14,8 @@ const API = {
       google: book.id,
       title: book.title,
       authors: book.authors,
-      image: book.thumbnail,
-      link: book.infoLink,
+      image: book.image,
+      link: book.link,
       description: book.description,
     });
   },

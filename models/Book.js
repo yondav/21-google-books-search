@@ -2,6 +2,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const BookSchema = new Schema({
+  google: {
+    type: String,
+    default: 'google_id',
+  },
   title: {
     type: String,
     default: 'book_title',
@@ -16,7 +20,8 @@ const BookSchema = new Schema({
   },
   image: {
     type: String,
-    default: 'image_URL',
+    default:
+      'https://dummyimage.com/287.98X479.22/222222/fff&text=photo+unavailable',
   },
   link: {
     type: String,

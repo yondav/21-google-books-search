@@ -19,7 +19,6 @@ const GoogleBooks = () => {
     }
     if (debouncedSearchTerm) {
       API.googleBooks(input).then(({ data: { items } }) => {
-        console.log(items);
         setResults(items);
       });
     }

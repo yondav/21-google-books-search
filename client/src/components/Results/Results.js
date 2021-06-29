@@ -13,9 +13,9 @@ const Results = ({ results }) => {
       id: book.id,
       title: book.volumeInfo.title,
       authors: book.volumeInfo.authors,
-      image: book.volumeInfo.imageLinks.thumbnail,
-      link: book.selfLink,
       description: book.volumeInfo.description,
+      image: book.volumeInfo.imageLinks.thumbnail,
+      link: book.volumeInfo.previewLink,
     });
   };
 
@@ -60,31 +60,33 @@ const Results = ({ results }) => {
                   ))}
                 </Card.Text>
                 <hr />
-                <div className='d-flex align-items-baseline results-links'>
+                <div className='d-flex align-items-center results-links'>
                   {!liked.includes(book.id) && (
                     <FontAwesomeIcon
                       icon={faHeart}
-                      className='heart'
+                      className='heart fa-lg'
                       onClick={() => handleSave(book)}
                     />
                   )}
                   {liked.includes(book.id) && (
                     <FontAwesomeIcon
                       icon={faHeart}
-                      className='heart'
+                      className='heart fa-lg'
                       style={{ color: 'var(--heart)' }}
                       onClick={() => handleRemove(book)}
                     />
                   )}
                   <a
-                    href={book.selfLink}
+                    href={book.volumeInfo.previewLink}
                     target='_blank'
                     rel='noopener noreferrer'
                   >
                     More Info
                   </a>
                 </div>
-                <Card.Text>{book.volumeInfo.description}</Card.Text>
+                <Card.Text className='mt-3'>
+                  {book.volumeInfo.description}
+                </Card.Text>
               </Card.Body>
             </Card>
           </div>

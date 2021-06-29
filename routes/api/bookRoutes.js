@@ -22,7 +22,7 @@ router.post('/', cors(), async (req, res) => {
 
 router.delete('/:id', cors(), async (req, res) => {
   try {
-    const deleteBook = await Book.deleteOne({ _id: req.params.id });
+    const deleteBook = await Book.deleteOne({ google: req.params.id });
     res.json(deleteBook);
   } catch (error) {
     res.json(error);
