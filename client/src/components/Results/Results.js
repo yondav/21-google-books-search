@@ -53,8 +53,8 @@ const Results = ({ results }) => {
                 <Card.Title>{book.volumeInfo.title}</Card.Title>
                 <Card.Text>
                   by{' '}
-                  {book.volumeInfo.authors.map((auth) => (
-                    <span>
+                  {book.volumeInfo.authors.map((auth, index) => (
+                    <span key={`${book.id}-auth-${index}`}>
                       {book.volumeInfo.authors.length > 1 ? `|${auth}|` : auth}
                     </span>
                   ))}
