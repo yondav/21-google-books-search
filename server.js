@@ -15,7 +15,13 @@ app.use(require('./routes'));
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/googlebooks', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false,
 });
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
+}
 
 app.listen(PORT, () => {
   console.log(`Now listening on PORT ${PORT}!`);
