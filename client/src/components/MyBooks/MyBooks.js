@@ -13,7 +13,6 @@ const MyBooks = ({ results }) => {
   return (
     <div className='row'>
       {results.map((book) => {
-        console.log(book);
         return (
           <div className='col-12' key={book.google}>
             <Card className='results-card align-items-center flex-md-row align-items-md-start'>
