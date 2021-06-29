@@ -19,6 +19,7 @@ const GoogleBooks = () => {
     }
     if (debouncedSearchTerm) {
       API.googleBooks(input).then(({ data: { items } }) => {
+        console.log(items);
         setResults(items);
       });
     }
@@ -40,7 +41,6 @@ const GoogleBooks = () => {
               setResults={setResults}
               results={results}
             />
-            {console.log(results)}
           </div>
         </div>
         {results !== [] && <Results results={results} />}

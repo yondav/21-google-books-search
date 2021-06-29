@@ -1,6 +1,6 @@
 :root {
   --primary-bg: #f0f2f3;
-  --primary-light: #fafaf6;
+  --primary-light: #f3f3f3;
   --primary-dark: #222222;
   --underline: #3e7ec8;
   --heart: #cf5555;
@@ -16,7 +16,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--primary-dark);
-  background-color: var(--primary-bg);
 }
 
 code {

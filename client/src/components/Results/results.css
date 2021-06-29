@@ -58,7 +58,6 @@
   .results-img {
     height: 100%;
     width: 25%;
-    /* object-fit: contain; */
     margin-top: 0;
   }
 }
