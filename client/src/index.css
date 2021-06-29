@@ -1,8 +1,9 @@
 :root {
-  --primary-bg: #ddf7ff;
+  --primary-bg: #f0f2f3;
   --primary-light: #fafaf6;
   --primary-dark: #222222;
   --underline: #3e7ec8;
+  --heart: #cf5555;
   --transition: 0.3s ease-in-out;
   --shadow: rgba(0, 0, 0, 0.35) 0.95px 1.95px 2.6px;
 }
@@ -21,6 +22,14 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 .underline {

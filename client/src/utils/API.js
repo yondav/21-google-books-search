@@ -11,6 +11,7 @@ const API = {
   },
   saveNewBook(book) {
     return axios.post(`${server}/api/books`, {
+      google: book.id,
       title: book.title,
       authors: book.authors,
       image: book.thumbnail,

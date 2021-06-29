@@ -9,17 +9,7 @@ const Search = ({ input, setInput, setResults }) => {
   const [err, setErr] = useState('');
 
   const handleChange = (e) => {
-    setTimeout(() => {
-      setInput(e.target.value);
-    }, 2000);
-    //still sending the api request with no value for some reason
-    if (input.trim() === '') {
-      return null;
-    } else {
-      API.googleBooks(input).then(({ data: { items } }) => {
-        setResults(items);
-      });
-    }
+    setInput(e.target.value);
   };
 
   const handleSubmit = (e) => {
