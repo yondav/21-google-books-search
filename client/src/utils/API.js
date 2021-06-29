@@ -1,7 +1,5 @@
 import axios from 'axios';
 
-// const server = 'http://localhost:3001';
-
 const API = {
   googleBooks(search) {
     return axios.get(`/search/${search}`);
