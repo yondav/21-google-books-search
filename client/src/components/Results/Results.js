@@ -24,9 +24,7 @@ const Results = ({ results }) => {
     saveBook(book);
   };
 
-  const removeBook = (book) => {
-    API.deleteBook(book.id);
-  };
+  const removeBook = (book) => API.deleteBook(book.id);
 
   const handleRemove = (book) => {
     let newLiked = liked.filter((like) => like !== book.id);

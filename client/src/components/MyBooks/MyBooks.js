@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Card from 'react-bootstrap/Card';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import API from '../../utils/API';
 
 const MyBooks = ({ results }) => {
+  const removeBook = (book) => {
+    API.deleteBook(book.google);
+    window.location.reload();
+  };
+
   return (
     <div className='row'>
       {results.map((book) => {
@@ -33,7 +38,7 @@ const MyBooks = ({ results }) => {
                     icon={faHeart}
                     className='heart fa-lg'
                     style={{ color: 'var(--heart)' }}
-                    // onClick={() => handleRemove(book)}
+                    onClick={() => removeBook(book)}
                   />
                   <a href={book.link} target='_blank' rel='noopener noreferrer'>
                     More Info
