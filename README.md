@@ -10,7 +10,7 @@
     </a>
   </div>
   <a href="https://yondav-21-google-books-search.herokuapp.com/" alt"deployed">
-    <img src="./readme/Books-icon.png" alt="yondav" width="200" />
+    <img src="./readme/Books-icon.png" alt="yondav" style="background-color: #fafafa; padding: 1rem; border-radius: 3.5rem;" width="200" />
   </a>
 </div>
 <br />
